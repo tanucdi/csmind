@@ -1,52 +1,54 @@
-import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './header.css';
+import React from 'react';
+import {Nav, Navbar, NavDropdown, MenuItem,  Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, FormGroup, FormControl} from 'react-bootstrap';
 
 const Header = () => {
     return (
-       
-            <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-
-      <div class="logo mr-auto">
-        
-      <a href="index.html"><img src="/images/logo.jpg" alt="" class="img-fluid" /></a>
-      </div>
-
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
-
-          <li class="get-started"><a href="#about">Get Started</a></li>
-        </ul>
-      </nav>
-
-    </div>
-  </header>
-       
+        <div>
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  <Navbar.Brand href="#home">CS MIND</Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="mr-auto">
+      
+    </Nav>
+    <Nav>
+    <Nav.Link href="#features">About</Nav.Link>
+      <NavDropdown title="Portfolio" id="collasible-nav-dropdown">
+        <NavDropdown.Item href="#action/3.1">Innovations at CS MIND</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.2">Aim at CS MIND</NavDropdown.Item>
+           <NavDropdown.Divider />
+        <NavDropdown.Item href="#action/3.4">3C at CS MIND</NavDropdown.Item>
+      </NavDropdown>
+      <NavDropdown title="Ventures" id="collasible-nav-dropdown">
+        <NavDropdown.Item href="#action/3.1">Project1</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.2">Project2</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">Project3</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="#action/3.4">New Project</NavDropdown.Item>
+      </NavDropdown>
+      <NavDropdown title="Values" id="collasible-nav-dropdown">
+        <NavDropdown.Item href="#action/3.1">Vision</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.2">Mission</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">Policy</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+      </NavDropdown>
+      <NavDropdown title="Team" id="collasible-nav-dropdown">
+        <NavDropdown.Item href="#action/3.1">Chairman</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.2">Associates</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">Tanishk</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="#action/3.4">Harsh</NavDropdown.Item>
+      </NavDropdown>
+      
+      <Nav.Link href="#deets">Contact</Nav.Link>
+      <Nav.Link eventKey={2} href="#memes">
+        Login
+      </Nav.Link>
+    </Nav>
+  </Navbar.Collapse>
+</Navbar>
+        </div>
     )
 }
 
